@@ -39,7 +39,13 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
     return <div>Error occured! {errorMsg}</div>;
   }
   return (
-    <div className="container">
+    <div  style={{
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "#1c1a1a33"
+        }}>
+    <div className="container"
+    >
       <BsArrowLeftCircleFill
         className="arrow arrow-left"
         onClick={handlePrevious}
@@ -62,6 +68,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
         className="arrow arrow-right"
         onClick={handleNext}
       />
+      <span className="circle-indicator">
       {images && images.length
         ? images.map((_, index) => (
             <button key={index} className={
@@ -74,6 +81,8 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
               ></button>
           ))
         : null}
+        </span>
+    </div>
     </div>
   );
 }
