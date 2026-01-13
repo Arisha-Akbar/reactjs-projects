@@ -39,11 +39,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
     return <div>Error occured! {errorMsg}</div>;
   }
   return (
-    <div  style={{
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "#1c1a1a33"
-        }}>
+    <div className="center">
     <div className="container"
     >
       <BsArrowLeftCircleFill

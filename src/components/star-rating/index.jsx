@@ -16,12 +16,7 @@ export default function StarRating({ noOfStars = 5 }) {
     setHover(rating);
   }
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <div className="abc">
       {[...Array(noOfStars)].map((_, index) => {
         index += 1;
         return (
@@ -32,6 +27,7 @@ export default function StarRating({ noOfStars = 5 }) {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave()}
             size={40}
+            
           />
         );
       })}
